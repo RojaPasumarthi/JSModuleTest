@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+margin:0 px;
+padding:0 px;
+
+}
+
+
+body{
+    background-color:#8CC461;
+    font-family: "Roboto", sans-serif;
+    padding-top:4%;
+}
+
+.heading{
+    border:2px solid white;
+    border-radius:10px;
+    width:35rem;
+    margin-left: 25rem; 
+}
+#content
+{ 
+    display:flex;
+    justify-content:space-between;
+    
+}
+#pheading{
+    font-size:20px;
+    padding:0px 0px 0px 7px;
+    color:white;
+}
+.scores{
+    display:flex;
+    width:50%;
+    gap:7%;
+    justify-content:flex-end;
+    padding:11px;
+ }
+ #computer,#user{
+   
+    border:1px solid white;
+    width:5rem;
+    background-color:white;
+    border-radius: 10px;
+}
+#computerHeading,#userHeading{
+    font-size:10px;
+    text-align:center;
+
+}
+#CScore,#UScore{
+    text-align:center;
+}
+
+.gamePart{
+    display:flex;
+    align-items:center;
+    
+    width:62%;
+    margin-left:30rem;
+    margin-top:-7rem;
+}
+
+#paper{
+    margin-top:330px;
+    margin-left:-20%;
+    border: 16.5px solid #FFA943;
+    border-radius:50%;
+    height:9vw;
+    width:9vw;
+
+}
+
+#rock{
+    border: 16.5px solid #0074B6;
+    border-radius:50%;
+    height:9vw;
+    width:9vw;
+}
+
+#scissor{
+    border: 16.5px solid #BD00FF;
+    border-radius:50%;
+    height:9vw;
+    width:9vw;
+    
+}
+
+.line2
+{
+    margin-top:201px;
+    margin-left:-153px;
+}
+
+.line3{
+    margin-top:217px;
+    margin-left:-182px;
+}
+
+
+#rules{
+    height:33px;
+    width:103px;
+    border:1px solid white;
+    margin-left:1210px;
+    margin-top:87px;
+    color:white;
+    border-radius:2px;
+    background-color:#8CC461 ;
+}
+
+#gameRules{
+    
+        background-color: #004429;
+        width: 15%;
+        height: 40%;
+        position: absolute;
+        top: 48%;
+        right: 3%;
+        border: 0.4vw solid white;
+        border-radius: 0.5vw;
+        padding-top: 1vw;
+    
+}
+
+#gameRules  > h1{
+    color: white;
+    text-align: center;
+    font-size: 1.5vw;
+}
+
+#gameRules > ul >li{
+    width: 90%;
+    font-size:9px;
+    color:white;
+    list-style:square;
+    
+}
+
+li::marker{
+    color:yellow;
+}
+
+#crossMark{
+    
+        font-size: 24px;
+        color: white;
+        font-weight: 500;
+        background-color: #FF0000;
+        height:3vw;
+        width: 3vw;
+        border: 0.3vw solid white;
+        border-radius: 50%;
+        position: absolute;
+        right: -7%;
+        top: -10%;
+    }
+
+    button:hover{
+        cursor: pointer;
+    }
+
+
+

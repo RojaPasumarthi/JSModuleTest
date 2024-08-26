@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="initial-scale = 1.0 , width=device-width"/>
+        <title>
+            Tie
+        </title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/styles2.css">
+
+    </head>
+    <body>
+        <header class="heading">
+            <div id="content">
+                <div id="title">
+                  <p id="pheading">ROCK</br>PAPER</br>SCISSORS</p>
+                </div>
+                <div class="scores">
+                 <div id="computer">
+                   <p id="computerHeading">COMPUTER <br> SCORE</p>
+                   <p id="CScore">0</p>
+                </div>
+                <div id="user">
+                   <p id="userHeading">YOUR <br> SCORE</p>
+                   <p id="UScore">0</p>
+                </div>
+                </div>
+             </div>
+            </header>
+
+            <div class="phases">
+                <h1>TIE UP</h1>
+                <a href="/index.html"><button class="playAgain">REPLAY</button></a>
+              </div>
+        
+              <div class="leftImage circle">
+                <img class="userSide" src="/images/fist.png" alt="rockImage" />
+              </div>
+              <div class="rightImage circle">
+                <img class="computerSide" src="/images/fist.png" alt="rockImage"/>
+              </div>
+             
+              <footer>
+                <button name="Rules" id="rules" style="margin-top:186px;">RULES</button>
+                 <div id="gameRules">
+                    <h1>
+                        Game Rules
+                    </h1>
+                    <ul>
+                        <li>
+                            Rock beats scissors, scissors beat paper, and paper beats rock.
+                        </li></br>
+                        <li>
+                            Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”
+                        </li></br>
+                        <li>
+                            Use rock, paper, scissors to settle minor decisions or simply play to pass the time
+                        </li></br>
+                        <li>
+                            If both players lay down the same hand, each player lays down another hand
+                        </li></br>
+                    </ul>
+                    <button id="crossMark">X</button>
+                </div> 
+            </footer>
+            <script src="script.js"></script>
+            <script>
+                document.addEventListener("DOMContentLoaded", () => {
+                  const userIcon = document.querySelector(".userSide");
+                  const computerIcon = document.querySelector(".computerSide");
+                  const userChoice = localStorage.getItem("userChoice");
+                  const computerChoice = localStorage.getItem("computerChoice");
+          
+                  userIcon.src = `../images/${userChoice}.png`;
+                  computerIcon.src = `../images/${computerChoice}.png`;
+          
+                  const leftImg = document.querySelector('.leftImage');
+                  const rightImg = document.querySelector('.rightImage');
+          
+                  leftImg.classList.add(`${userChoice}1`);
+                  rightImg.classList.add(`${computerChoice}1`);
+          
+                  // Clear the choices from localStorage
+                  localStorage.removeItem("userChoice");
+                  localStorage.removeItem("computerChoice");
+                });
+              </script> 
+    </body>
+
+</html>

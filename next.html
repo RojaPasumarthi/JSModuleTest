@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="/styles2.css"/>
+    <title>You Won</title>
+</head>
+<body>
+    <div class="next-main">
+        <img class="trophy" src="/images/winner.png" alt="trophy">
+        <h1 class="next-h1">HURRAY!!</h1>
+        <h2 class="next-h2">YOU WON THE GAME</h2>
+        <a href="../index.html"><button class="playAgain">PLAY AGAIN</button></a>
+      </div>
+
+    
+        <button name="Rules" id="rules" style="margin-top: 0px;">RULES</button>
+        <div id="gameRules">
+           <h1>
+               Game Rules
+           </h1>
+           <ul>
+               <li>
+                   Rock beats scissors, scissors beat paper, and paper beats rock.
+               </li></br>
+               <li>
+                   Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”
+               </li></br>
+               <li>
+                   Use rock, paper, scissors to settle minor decisions or simply play to pass the time
+               </li></br>
+               <li>
+                   If both players lay down the same hand, each player lays down another hand
+               </li></br>
+           </ul>
+           <button id="crossMark">X</button>
+       </div> 
+
+
+     
+      <img src="/images/Star 3.png"alt="star" class="star star2">
+      <img src="/images/Star 6.png" alt="star" class="star star3">
+      <img src="/images/Star 3.png" alt="star" class="star star4">
+      <img src="/images/Star 6.png" alt="star" class="star star5">
+      <img src="/images/Star 3.png" alt="star" class="star star6">
+      <img src="/images/Star 6.png" alt="star" class="star star7">
+
+
+    </div>
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+       const crsBtn=document.getElementById("crossMark");
+       const gmeRules=document.getElementById("gameRules");
+       const RlsBtn=document.getElementById("rules");
+
+       window.addEventListener("DOMContentLoaded", (event) => {
+       RlsBtn.addEventListener("click",() => {
+       gmeRules.style.visibility="visible";
+       crsBtn.style.visibility="visible";
+      });
+   });
+
+       crsBtn.addEventListener("click", () =>{
+       gmeRules.style.visibility="hidden";
+       crsBtn.style.visibility="hidden";
+     });
+    });
+    </script> 
+</body>
+</html>

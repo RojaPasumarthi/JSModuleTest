@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="initial-scale = 1.0 , width=device-width"/>
+        <title>
+            Win 
+        </title>
+        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/styles2.css">
+
+    </head>
+    <body>
+        <header class="heading">
+            <div id="content">
+                <div id="title">
+                  <p id="pheading">ROCK</br>PAPER</br>SCISSORS</p>
+                </div>
+                <div class="scores">
+                 <div id="computer">
+                   <p id="computerHeading">COMPUTER <br> SCORE</p>
+                   <p id="CScore"></p>
+                </div>
+                <div id="user">
+                   <p id="userHeading">YOUR <br> SCORE</p>
+                   <p id="UScore"></p>
+                </div>
+                </div>
+             </div>
+            </header>
+
+            <div class="phases">
+                <h1>YOU WIN</h1>
+                <h2>AGAINST PC</h2>
+                <a href="/index.html"><button class="playAgain">PLAY AGAIN</button></a>
+               <div class="leftImage circle">
+                <img class="userSide" src="images/fist.png" alt="rock-img" />
+               </div>
+               <div class="rightImage circle">
+                <img
+                  class="computerSide" src="images/fist.png" alt="rock-img" />
+                </div>
+             </div>   
+
+             <footer>
+                <button name="Rules" id="rules" class="wrules" style="margin-left:1057px;margin-top:112px;">RULES</button>
+               <a href="/next.html"><button id="rules" class="Next" 
+                style=" margin-left:1198px;margin-top:-42px;">NEXT</button></a>
+                 <div id="gameRules">
+                    <h1>
+                        Game Rules
+                    </h1>
+                    <ul>
+                        <li>
+                            Rock beats scissors, scissors beat paper, and paper beats rock.
+                        </li></br>
+                        <li>
+                            Agree ahead of time whether you'll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”
+                        </li></br>
+                        <li>
+                            Use rock, paper, scissors to settle minor decisions or simply play to pass the time
+                        </li></br>
+                        <li>
+                            If both players lay down the same hand, each player lays down another hand
+                        </li></br>
+                    </ul>
+                    <button id="crossMark">X</button>
+                </div> 
+            </footer> 
+          
+            <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const userIcon = document.querySelector(".userSide");
+                const computerIcon = document.querySelector(".computerSide");
+                const userChoice = localStorage.getItem("userChoice");
+                const computerChoice = localStorage.getItem("computerChoice");
+        
+                userIcon.src = `../images/${userChoice}.png`;
+                computerIcon.src = `../images/${computerChoice}.png`;
+        
+                const leftImg = document.querySelector('.leftImage');
+                const rightImg = document.querySelector('.rightImage');
+        
+                leftImg.classList.add(`${userChoice}1`);
+                rightImg.classList.add(`${computerChoice}1`);
+        
+                // clear the choices from localStorage
+                localStorage.removeItem("userChoice");
+                localStorage.removeItem("computerChoice");
+              });
+              </script>
+             <script src="script.js"></script>
+        </body>
+</html>
